@@ -44,8 +44,7 @@ RUN sed -i 's,clamd_local ,#clamd_local ,' /etc/c-icap/squidclamav.conf \
 		&& echo "icap_access allow all") >> /etc/c-icap/c-icap.conf
 
 COPY entrypoint.sh /usr/local/bin/docker-entrypoint
-RUN \
-	chmod +x /usr/local/bin/* \
-	sed -i 's,\r,,g' /usr/local/bin/*
+RUN chmod +x /usr/local/bin/* \
+	&& sed -i 's,\r,,g' /usr/local/bin/*
 
 ENTRYPOINT ["docker-entrypoint"]

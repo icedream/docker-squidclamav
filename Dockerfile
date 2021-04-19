@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 ARG SQUIDCLAMAV_GIT_URL=https://github.com/darold/squidclamav.git
-ARG SQUIDCLAMAV_VERSION=v6.16
+ARG SQUIDCLAMAV_VERSION=v7.1
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
